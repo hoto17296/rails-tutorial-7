@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+$(dirname ${0})/wait-for-it postgres:5432 -- echo "PostgreSQL is up"
+
+rails db:create
+rails db:migrate
+
+exec "$@"

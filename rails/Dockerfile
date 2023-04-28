@@ -7,4 +7,4 @@ COPY gemrc /etc/gemrc
 COPY . .
 RUN bundle install
 
-ENTRYPOINT ["rails"]
+ENTRYPOINT ["bin/entrypoint"]

@@ -6,4 +6,18 @@ services:
       - ./rails:/rails
     ports:
       - 3000:3000
-    command: server --binding=0.0.0.0
+    environment:
+      DATABASE_URL: postgres://postgres@postgres/postgres
+    command: rails server --binding=0.0.0.0
+
+  postgres:
+    image: postgres:15
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+volumes:
+  postgres:
