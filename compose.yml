@@ -4,3 +4,5 @@ services:
     build: rails
     volumes:
       - ./rails:/rails
+    ports:
+      - 3000:3000
