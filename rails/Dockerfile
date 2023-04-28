@@ -7,4 +7,4 @@ COPY gemrc /etc/gemrc
 COPY . .
 RUN bundle install
 
-CMD ["rails", "server", "--binding=0.0.0.0"]
+ENTRYPOINT ["rails"]
