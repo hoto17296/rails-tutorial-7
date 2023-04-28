@@ -1,0 +1,14 @@
+{
+  "ruby.useBundler": false,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+      "rubocop": {
+          "except": ["Metrics"] // because it is annoying that it puts wavy lines to all lines in those methods
+      }
+  },
+  "ruby.format": "rubocop",
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.formatOnSave": true,
+  }
+}
