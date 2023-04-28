@@ -1,0 +1,6 @@
+services:
+
+  rails:
+    build: rails
+    volumes:
+      - ./rails:/rails
