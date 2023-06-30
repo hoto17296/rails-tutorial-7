@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   resources :microposts
   resources :users
+  get '/signup', to: 'users#new'
 end
