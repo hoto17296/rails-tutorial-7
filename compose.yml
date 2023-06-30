@@ -8,6 +8,8 @@ services:
       - 3000:3000
     environment:
       DATABASE_URL: postgres://postgres@postgres/postgres
+    depends_on:
+      - postgres
     command: rails server --binding=0.0.0.0
 
   postgres:
